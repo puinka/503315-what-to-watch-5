@@ -125,4 +125,6 @@ const MyListScreen = () => {
       </footer>
     </div>
   );
-}
+};
+
+export default MyListScreen;

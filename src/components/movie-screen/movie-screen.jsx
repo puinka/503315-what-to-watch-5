@@ -1,6 +1,6 @@
 import React from "react";
 import {propTypes} from "./propTypes";
-import {Link} from "react-router-dom";
+
 
 const MovieScreen = (props) => {
 

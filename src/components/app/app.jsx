@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {propTypes} from "./propTypes";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import Main from "../main/main";
 import SignInScreen from "../sign-in-screen/sign-in-screen";
@@ -8,16 +8,19 @@ import MovieScreen from "../movie-screen/movie-screen";
 import AddReviewScreen from "../add-review-screen/add-review-screen";
 import PlayerScreen from "../player-screen/player-screen";
 
+
 const App = (props) => {
 
-  const {title, genre, year} = props;
+  const {title, genre, year, films} = props;
 
   return (
 
     <BrowserRouter>
       <Switch>
-        <Route exact path="/">
-          <Main title={title} genre={genre} year={year} />
+        <Route exact path="/" render={({history}) => (
+          <Main title={title} genre={genre} year={year} films={films}/>
+        )}>
+
         </Route>
 
         <Route exact path="/login">
@@ -44,10 +47,6 @@ const App = (props) => {
   );
 };
 
-App.propTypes = {
-  title: PropTypes.string.isRequired,
-  genre: PropTypes.string.isRequired,
-  year: PropTypes.number.isRequired
-};
+App.propTypes = propTypes;
 
 export default App;

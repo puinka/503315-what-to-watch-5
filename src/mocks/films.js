@@ -92,14 +92,14 @@ export default [
     title: `Revenant`,
     genre: [`Comedy`, `Drama`],
     year: `2015`,
-    director: `Wes Andreson`,
-    starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Saoirse Ronan`, `Tony Revoloru`, `Tilda Swinton`, `Tom Wilkinson`, `Owen Wilkinson`, `Adrien Brody`, `Ralph Fiennes`, `Jeff Goldblum`],
-    runTime: `1h 39m`,
+    director: `Alejandro G. Iñárritu`,
+    starring: [`Leonardo DiCaprio`, `Tom Hardy`, `Will Poulter`],
+    runTime: `2h 36m`,
     preview: `img/revenant.jpg`,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    poster: `img/revenant-poster.jpg`,
+    background: `img/bg-revenant.jpg`,
     trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-    description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave\'s friend and protege.Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.`
+    description: `A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.`
 
   }
 ];

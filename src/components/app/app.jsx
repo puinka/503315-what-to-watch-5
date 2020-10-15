@@ -18,7 +18,9 @@ const App = (props) => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" render={({history}) => (
-          <Main title={title} genre={genre} year={year} films={films}/>
+          <Main
+            onCardClick={() => history.push(`/films/:id`)}
+            title={title} genre={genre} year={year} films={films}/>
         )}>
 
         </Route>
@@ -32,7 +34,7 @@ const App = (props) => {
         </Route>
 
         <Route exact path="/films/:id">
-          <MovieScreen />
+          <MovieScreen film={films[7]} />
         </Route>
 
         <Route exact path="/films/:id/review">

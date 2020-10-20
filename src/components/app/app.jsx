@@ -1,5 +1,6 @@
 import React from "react";
-import {propTypes} from "./propTypes";
+import PropTypes from "prop-types";
+import {filmTypes} from "../../types/film-types";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import Main from "../main/main";
 import SignInScreen from "../sign-in-screen/sign-in-screen";
@@ -11,7 +12,7 @@ import PlayerScreen from "../player-screen/player-screen";
 
 const App = (props) => {
 
-  const {title, genre, year, films} = props;
+  const {title, genre, year, moviesList} = props;
 
   return (
 
@@ -20,7 +21,7 @@ const App = (props) => {
         <Route exact path="/" render={({history}) => (
           <Main
             onCardClick={() => history.push(`/films/:id`)}
-            title={title} genre={genre} year={year} films={films}/>
+            title={title} genre={genre} year={year} movies={moviesList}/>
         )}>
 
         </Route>
@@ -49,6 +50,11 @@ const App = (props) => {
   );
 };
 
-App.propTypes = propTypes;
+App.propTypes = {
+  moviesList: PropTypes.arrayOf(filmTypes).isRequired,
+  title: PropTypes.string.isRequired, // temp
+  genre: PropTypes.string.isRequired, // temp
+  year: PropTypes.string.isRequired // temp
+};
 
 export default App;

@@ -1,5 +1,5 @@
 import React, {PureComponent} from "react";
-import {propTypes} from "./propTypes";
+import {filmTypes} from "../../types/film-types";
 
 class AddReview extends PureComponent {
 
@@ -111,6 +111,8 @@ class AddReview extends PureComponent {
   }
 }
 
-AddReview.propTypes = propTypes;
+AddReview.propTypes = {
+  film: filmTypes
+};
 
 export default AddReview;

@@ -1,11 +1,13 @@
 import React from "react";
+// import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
-import {propTypes} from "./propTypes";
+import {filmTypes} from "../../types/film-types";
+
 
 const MovieCard = (props) => {
 
   const {film} = props;
-  const {preview, title} = film;
+  const {id, preview, title} = film;
 
   return (
     <article className="small-movie-card catalog__movies-card">
@@ -13,12 +15,14 @@ const MovieCard = (props) => {
         <img src={preview} alt={title} width="280" height="175" />
       </div>
       <h3 className="small-movie-card__title">
-        <Link to="/films/id" className="small-movie-card__link" href="movie-page.html">{title}</Link>
+        <Link to={`/films/${id}`} className="small-movie-card__link">{title}</Link>
       </h3>
     </article>
   );
 };
 
-MovieCard.propTypes = propTypes;
+MovieCard.propTypes = {
+  film: filmTypes
+};
 
 export default MovieCard;

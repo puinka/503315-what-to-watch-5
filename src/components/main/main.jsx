@@ -1,10 +1,12 @@
 import React from "react";
-import {propTypes} from "./propTypes";
+import PropTypes from "prop-types";
+import {filmTypes} from "../../types/film-types";
 import MoviesList from "../movies-list/movies-list";
+
 
 const Main = (props) => {
 
-  const {title, genre, year, films} = props;
+  const {title, genre, year, moviesList} = props;
 
   return (
     <React.Fragment>
@@ -101,7 +103,8 @@ const Main = (props) => {
             </li>
           </ul>
 
-          <MoviesList films={films} />
+          <MoviesList
+            movies={moviesList} />
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -126,6 +129,11 @@ const Main = (props) => {
   );
 };
 
-Main.propTypes = propTypes;
+Main.propTypes = {
+  title: PropTypes.string.isRequired,
+  genre: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
+  moviesList: PropTypes.arrayOf(filmTypes).isRequired
+};
 
 export default Main;

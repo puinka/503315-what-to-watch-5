@@ -1,30 +1,30 @@
 import React from "react";
-import PropTypes from "prop-types";
 import {filmTypes} from "../../types/film-types";
+import {Link} from "react-router-dom";
 import MoviesList from "../movies-list/movies-list";
 
 
 const Main = (props) => {
 
-  const {title, genre, year, moviesList} = props;
+  const {films} = props;
 
   return (
     <React.Fragment>
 
       <section className="movie-card">
         <div className="movie-card__bg">
-          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={title} />
+          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={films[1].title} />
         </div>
 
         <h1 className="visually-hidden">WTW</h1>
 
         <header className="page-header movie-card__head">
           <div className="logo">
-            <a className="logo__link">
+            <Link to="/" className="logo__link">
               <span className="logo__letter logo__letter--1">W</span>
               <span className="logo__letter logo__letter--2">T</span>
               <span className="logo__letter logo__letter--3">W</span>
-            </a>
+            </Link>
           </div>
 
           <div className="user-block">
@@ -41,10 +41,10 @@ const Main = (props) => {
             </div>
 
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{title}</h2>
+              <h2 className="movie-card__title">{films[1].title}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{genre}</span>
-                <span className="movie-card__year">{year}</span>
+                <span className="movie-card__genre">{films[1].genre}</span>
+                <span className="movie-card__year">{films[1].year}</span>
               </p>
 
               <div className="movie-card__buttons">
@@ -104,7 +104,7 @@ const Main = (props) => {
           </ul>
 
           <MoviesList
-            movies={moviesList} />
+            films={films} />
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -129,11 +129,7 @@ const Main = (props) => {
   );
 };
 
-Main.propTypes = {
-  title: PropTypes.string.isRequired,
-  genre: PropTypes.string.isRequired,
-  year: PropTypes.number.isRequired,
-  moviesList: PropTypes.arrayOf(filmTypes).isRequired
-};
+Main.propTypes = filmTypes.films;
+
 
 export default Main;

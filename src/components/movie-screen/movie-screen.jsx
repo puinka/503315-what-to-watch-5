@@ -1,12 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
-import {filmTypes} from "../../types/film-types";
 import MoviesList from "../movies-list/movies-list";
+import {Link} from "react-router-dom";
+import {filmTypes} from "../../types/film-types";
 
 
 const MovieScreen = (props) => {
 
-  const {film, moviesList} = props;
+  const {film, films} = props;
   const {title, year, genre, background, poster, director, starring, description} = film;
   const genreList = genre.join(`, `);
   const starringList = starring.join(`, `);
@@ -23,11 +23,11 @@ const MovieScreen = (props) => {
 
           <header className="page-header movie-card__head">
             <div className="logo">
-              <a href="main.html" className="logo__link">
+              <Link to="/" className="logo__link">
                 <span className="logo__letter logo__letter--1">W</span>
                 <span className="logo__letter logo__letter--2">T</span>
                 <span className="logo__letter logo__letter--3">W</span>
-              </a>
+              </Link>
             </div>
 
             <div className="user-block">
@@ -110,7 +110,7 @@ const MovieScreen = (props) => {
           <h2 className="catalog__title">More like this</h2>
 
           <MoviesList
-            movies={moviesList} />
+            movies={films} />
 
         </section>
 
@@ -133,8 +133,8 @@ const MovieScreen = (props) => {
 };
 
 MovieScreen.propTypes = {
-  film: filmTypes,
-  moviesList: PropTypes.arrayOf(filmTypes).isRequired
+  films: filmTypes.filmsList,
+  film: filmTypes.singleFilm
 };
 
 export default MovieScreen;

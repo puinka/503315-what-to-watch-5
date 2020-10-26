@@ -22,34 +22,24 @@ class AddReview extends PureComponent {
 
   onRatingChange(evt) {
 
-    // этот код меняет стэйт
-    this.setState({rating: +evt.target.value});
+    const newRating = +evt.target.value;
 
-
-    // этот код не меняет state
-
-    // const newRating = +evt.target.value;
-
-    // this.setState((state) => Object.assign(
-    //     state,
-    //     {rating: newRating}
-    // ));
+    this.setState((state) => Object.assign(
+        state,
+        {rating: newRating}
+    ));
 
   }
 
 
   onReviewTextChange(evt) {
 
-    this.setState({reviewText: evt.target.value});
+    const newReviewtext = evt.target.value;
 
-    // Этот код не перерисовывает компонент:
-
-    // const newReviewtext = evt.target.value;
-
-    // this.setState((state) => Object.assign(
-    //     state,
-    //     {reviewText: newReviewtext}
-    // ));
+    this.setState((state) => Object.assign(
+        state,
+        {reviewText: newReviewtext}
+    ));
   }
 
   onSubmit(evt) {
@@ -112,7 +102,6 @@ class AddReview extends PureComponent {
                 {STARS.map((ratingValue) => {
 
 
-                  // звезды меняют цвет вне зависимости от того поменялся state или нет
                   return (
                     <Fragment key={`star-${ratingValue}`}>
                       <input

@@ -1,6 +1,6 @@
 import React from "react";
 
-const PlayerScreen = () => {
+export const PlayerScreen = () => {
   return (
     <div className="player">
       <video src="#" className="player__video" poster="img/player-poster.jpg"></video>
@@ -36,5 +36,3 @@ const PlayerScreen = () => {
     </div>
   );
 };
-
-export default PlayerScreen;

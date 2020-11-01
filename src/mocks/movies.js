@@ -1,8 +1,6 @@
-import {generateId} from "./utils.js";
-
 export default [
   {
-    id: generateId(),
+    id: 262180403526,
     title: `The Grand Budapest Hotel`,
     genre: [`Comedy`, `Drama`],
     year: 2014,
@@ -15,7 +13,7 @@ export default [
     trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave\'s friend and protege.Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.`
   }, {
-    id: generateId(),
+    id: 1043206795628,
     title: `Fantastic Beasts: The Crimes of Grindelwald`,
     genre: [`Comedy`, `Drama`],
     year: 2018,
@@ -23,12 +21,12 @@ export default [
     starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Saoirse Ronan`, `Tony Revoloru`, `Tilda Swinton`, `Tom Wilkinson`, `Owen Wilkinson`, `Adrien Brody`, `Ralph Fiennes`, `Jeff Goldblum`],
     runTime: `1h 39m`,
     preview: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    poster: `img/fantastic-beasts-poster.jpg`,
+    background: `img/bg-fantastic-beasts.jpg`,
     trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave\'s friend and protege.Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.`
   }, {
-    id: generateId(),
+    id: 398110694160,
     title: `Bohemian Rhapsody`,
     genre: [`Comedy`, `Drama`],
     year: 2018,
@@ -36,13 +34,13 @@ export default [
     starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Saoirse Ronan`, `Tony Revoloru`, `Tilda Swinton`, `Tom Wilkinson`, `Owen Wilkinson`, `Adrien Brody`, `Ralph Fiennes`, `Jeff Goldblum`],
     runTime: `1h 39m`,
     preview: `img/bohemian-rhapsody.jpg`,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    poster: `img/bohemian-rapsody-poster.jpg`,
+    background: `img/bg-bohemian-rapsody.jpg`,
     trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave\'s friend and protege.Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.`
 
   }, {
-    id: generateId(),
+    id: 1003665780996,
     title: `Macbeth`,
     genre: [`Comedy`, `Drama`],
     year: 2015,
@@ -50,13 +48,13 @@ export default [
     starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Saoirse Ronan`, `Tony Revoloru`, `Tilda Swinton`, `Tom Wilkinson`, `Owen Wilkinson`, `Adrien Brody`, `Ralph Fiennes`, `Jeff Goldblum`],
     runTime: `1h 39m`,
     preview: `img/macbeth.jpg`,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `mg/bg-the-grand-budapest-hotel.jpg`,
+    poster: `img/macbeth-poster.jpg`,
+    background: `img/bg-macbeth.jpg`,
     trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave\'s friend and protege.Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.`
 
   }, {
-    id: generateId(),
+    id: 1043017198181,
     title: `Aviator`,
     genre: [`Comedy`, `Drama`],
     year: 2004,
@@ -64,13 +62,13 @@ export default [
     starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Saoirse Ronan`, `Tony Revoloru`, `Tilda Swinton`, `Tom Wilkinson`, `Owen Wilkinson`, `Adrien Brody`, `Ralph Fiennes`, `Jeff Goldblum`],
     runTime: `1h 39m`,
     preview: `img/aviator.jpg`,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    poster: `img/aviator-poster.jpg`,
+    background: `img/bg-aviator.jpg`,
     trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave\'s friend and protege.Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.`
 
   }, {
-    id: generateId(),
+    id: 486469498339,
     title: `We need to talk about Kevin`,
     genre: [`Comedy`, `Drama`],
     year: 2010,
@@ -78,13 +76,13 @@ export default [
     starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Saoirse Ronan`, `Tony Revoloru`, `Tilda Swinton`, `Tom Wilkinson`, `Owen Wilkinson`, `Adrien Brody`, `Ralph Fiennes`, `Jeff Goldblum`],
     runTime: `1h 39m`,
     preview: `img/we-need-to-talk-about-kevin.jpg`,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    poster: `img/we-need-to-talk-poster.jpg`,
+    background: `img/bg-we-need-to-talk.jpg`,
     trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave\'s friend and protege.Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.`
 
   }, {
-    id: generateId(),
+    id: 825536150801,
     title: `What We Do in the Shadows`,
     genre: [`Comedy`, `Drama`],
     year: 2014,
@@ -98,7 +96,7 @@ export default [
     description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave\'s friend and protege.Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.`
 
   }, {
-    id: generateId(),
+    id: 639433394923,
     title: `Revenant`,
     genre: [`Comedy`, `Drama`],
     year: 2015,

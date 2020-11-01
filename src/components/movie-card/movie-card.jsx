@@ -1,12 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {filmTypes} from "../../types/film-types";
+import {moviePropTypes} from "../../types/movie-prop-types";
 
 
-const MovieCard = (props) => {
-
-  const {film} = props;
-  const {id, preview, title} = film;
+export const MovieCard = (props) => {
+  const {movie} = props;
+  const {id, preview, title} = movie;
 
   return (
     <article className="small-movie-card catalog__movies-card">
@@ -24,6 +23,7 @@ const MovieCard = (props) => {
   );
 };
 
-MovieCard.propTypes = filmTypes.singleFilm;
+MovieCard.propTypes = {
+  movie: moviePropTypes.isRequired
+};
 
-export default MovieCard;

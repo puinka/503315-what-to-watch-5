@@ -1,9 +1,8 @@
 import React, {PureComponent} from "react";
-import MovieCard from "../movie-card/movie-card";
-import PropTypes from "prop-types";
-import {filmTypes} from "../../types/film-types";
+import {MovieCard} from "../movie-card/movie-card";
+import {moviesListPropTypes} from "../../types/movie-prop-types";
 
-class MoviesList extends PureComponent {
+export class MoviesList extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -28,13 +27,13 @@ class MoviesList extends PureComponent {
   }
 
   render() {
-    const {films} = this.props;
+    const {movies} = this.props;
 
     return (
       <div className="catalog__movies-list">
-        {films.map((film) => (
-          <MovieCard key={film.id}
-            film={film}
+        {movies.map((movie) => (
+          <MovieCard key={movie.id}
+            movie={movie}
             onMouseOverCard={this.onMouseOverCard}
             onMouseOutCard={this.onMouseOutCard}/>
         ))}
@@ -46,7 +45,5 @@ class MoviesList extends PureComponent {
 }
 
 MoviesList.propTypes = {
-  films: PropTypes.arrayOf(filmTypes).isRequired,
+  movies: moviesListPropTypes.isRequired,
 };
-
-export default MoviesList;

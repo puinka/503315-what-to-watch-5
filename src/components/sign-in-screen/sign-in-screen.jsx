@@ -1,6 +1,6 @@
 import React from "react";
 
-const SignInScreen = () => {
+export const SignInScreen = () => {
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
@@ -50,4 +50,3 @@ const SignInScreen = () => {
   );
 };
 
-export default SignInScreen;

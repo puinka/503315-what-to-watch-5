@@ -1,6 +1,6 @@
 import React from "react";
 
-const MyListScreen = () => {
+export const MyListScreen = () => {
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
@@ -127,4 +127,3 @@ const MyListScreen = () => {
   );
 };
 
-export default MyListScreen;

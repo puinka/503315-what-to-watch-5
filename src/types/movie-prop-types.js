@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const singleFilmTypes = PropTypes.shape({
+export const moviePropTypes = PropTypes.shape({
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   genre: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -13,9 +13,6 @@ const singleFilmTypes = PropTypes.shape({
   background: PropTypes.string.isRequired,
   trailer: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-}).isRequired;
+});
 
-export const filmTypes = {
-  filmsList: PropTypes.arrayOf(singleFilmTypes).isRequired,
-  singleFilm: singleFilmTypes
-};
+export const moviesListPropTypes = PropTypes.arrayOf(moviePropTypes);

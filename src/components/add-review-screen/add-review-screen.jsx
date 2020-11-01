@@ -1,11 +1,12 @@
 import React, {PureComponent, Fragment} from "react";
-import {filmTypes} from "../../types/film-types";
+import {Link} from "react-router-dom";
+import {moviePropTypes} from "../../types/movie-prop-types";
 
 // const STAR_AMOUNT = 5;
 const STARS = [1, 2, 3, 4, 5];
 
 
-class AddReview extends PureComponent {
+export class AddReviewScreen extends PureComponent {
 
   constructor(props) {
     super(props);
@@ -49,8 +50,8 @@ class AddReview extends PureComponent {
 
   render() {
 
-    const {film} = this.props;
-    const {title, poster, background} = film;
+    const {movie} = this.props;
+    const {title, poster, background} = movie;
 
     return (
       <section className="movie-card movie-card--full">
@@ -63,11 +64,11 @@ class AddReview extends PureComponent {
 
           <header className="page-header">
             <div className="logo">
-              <a href="main.html" className="logo__link">
+              <Link className="logo__link" to="/">
                 <span className="logo__letter logo__letter--1">W</span>
                 <span className="logo__letter logo__letter--2">T</span>
                 <span className="logo__letter logo__letter--3">W</span>
-              </a>
+              </Link>
             </div>
 
             <nav className="breadcrumbs">
@@ -110,7 +111,7 @@ class AddReview extends PureComponent {
                         type="radio"
                         name="rating"
                         value={ratingValue}
-                        // checked={ratingValue <= this.state.rating}
+                        checked={ratingValue <= this.state.rating}
                         onChange={this.onRatingChange}
                       />
 
@@ -146,6 +147,7 @@ class AddReview extends PureComponent {
   }
 }
 
-AddReview.propTypes = filmTypes.singleFilm;
+AddReviewScreen.propTypes = {
+  movie: moviePropTypes.isRequired
+};
 
-export default AddReview;

@@ -1,19 +1,19 @@
 import React from "react";
-import {filmTypes} from "../../types/film-types";
+import {moviesListPropTypes} from "../../types/movie-prop-types";
 import {Link} from "react-router-dom";
-import MoviesList from "../movies-list/movies-list";
+import {MoviesList} from "../movies-list/movies-list";
 
 
-const Main = (props) => {
+export const Main = (props) => {
 
-  const {films} = props;
+  const {movies} = props;
 
   return (
     <React.Fragment>
 
       <section className="movie-card">
         <div className="movie-card__bg">
-          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={films[1].title} />
+          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={movies[1].title} />
         </div>
 
         <h1 className="visually-hidden">WTW</h1>
@@ -41,10 +41,10 @@ const Main = (props) => {
             </div>
 
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{films[1].title}</h2>
+              <h2 className="movie-card__title">{movies[1].title}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{films[1].genre}</span>
-                <span className="movie-card__year">{films[1].year}</span>
+                <span className="movie-card__genre">{movies[1].genre}</span>
+                <span className="movie-card__year">{movies[1].year}</span>
               </p>
 
               <div className="movie-card__buttons">
@@ -104,7 +104,7 @@ const Main = (props) => {
           </ul>
 
           <MoviesList
-            films={films} />
+            movies={movies} />
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -129,7 +129,8 @@ const Main = (props) => {
   );
 };
 
-Main.propTypes = filmTypes.films;
+Main.propTypes = {
+  movies: moviesListPropTypes.isRequired
+};
 
 
-export default Main;

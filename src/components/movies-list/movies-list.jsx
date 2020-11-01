@@ -1,8 +1,8 @@
-import React, {PureComponent} from "react";
+import React from "react";
 import {MovieCard} from "../movie-card/movie-card";
 import {moviesListPropTypes} from "../../types/movie-prop-types";
 
-export class MoviesList extends PureComponent {
+export class MoviesList extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -10,17 +10,17 @@ export class MoviesList extends PureComponent {
       activeCard: null
     };
 
-    this.onMouseOverCard = this.onMouseOverCard.bind(this);
-    this.onMouseOutCard = this.onMouseOutCard.bind(this);
+    this.handleCardMouseOver = this.handleCardMouseOver.bind(this);
+    this.handleCardMouseOut = this.handleCardMouseOut.bind(this);
   }
 
-  onMouseOverCard(id) {
+  handleCardMouseOver(id) {
     this.setState({
       activeCard: id
     });
   }
 
-  onMouseOutCard() {
+  handleCardMouseOut() {
     this.setState({
       activeCard: null
     });
@@ -34,14 +34,12 @@ export class MoviesList extends PureComponent {
         {movies.map((movie) => (
           <MovieCard key={movie.id}
             movie={movie}
-            onMouseOverCard={this.onMouseOverCard}
-            onMouseOutCard={this.onMouseOutCard}/>
+            handleCardMouseOver={this.handleCardMouseOver}
+            handleCardMouseOut={this.handleCardMouseOut}/>
         ))}
       </div>
     );
   }
-
-
 }
 
 MoviesList.propTypes = {

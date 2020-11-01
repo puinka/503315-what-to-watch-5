@@ -19,7 +19,8 @@ export const App = (props) => {
       <Switch>
         <Route exact path="/" >
           <Main
-            movies={movies}/>
+            movies={movies}
+          />
 
         </Route>
 
@@ -32,14 +33,18 @@ export const App = (props) => {
             movies={movies}/>
         </Route>
 
-        <Route exact path="/films/:id/review">
-          <AddReviewScreen movie={movies[6]}/>
-        </Route>
+        <Route exact path="/films/:id/review"
+          render={({match}) => <AddReviewScreen
+            movie={movies.find((movie) => movie.id === +match.params.id)}
+            movies={movies}
+          />}
+        />
 
         <Route exact path="/films/:id"
           render={({match}) => <MovieScreen
             movie={movies.find((movie) => movie.id === +match.params.id)}
-            movies={movies}/>}
+            movies={movies}
+          />}
         />
 
         <Route exact path="/player/:id">

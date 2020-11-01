@@ -1,23 +1,27 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {moviesListPropTypes} from "../../types/movie-prop-types";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
-import Main from "../main/main";
-import SignInScreen from "../sign-in-screen/sign-in-screen";
-import MyListScreen from "../my-list-screen/my-list-screen";
-import MovieScreen from "../movie-screen/movie-screen";
-import AddReviewScreen from "../add-review-screen/add-review-screen";
-import PlayerScreen from "../player-screen/player-screen";
+import {Main} from "../main/main";
+import {SignInScreen} from "../sign-in-screen/sign-in-screen";
+import {MyListScreen} from "../my-list-screen/my-list-screen";
+import {MovieScreen} from "../movie-screen/movie-screen";
+import {AddReviewScreen} from "../add-review-screen/add-review-screen";
+import {PlayerScreen} from "../player-screen/player-screen";
 
-const App = (props) => {
 
-  const {title, genre, year} = props;
+export const App = (props) => {
+
+  const {movies} = props;
 
   return (
 
     <BrowserRouter>
       <Switch>
-        <Route exact path="/">
-          <Main title={title} genre={genre} year={year} />
+        <Route exact path="/" >
+          <Main
+            movies={movies}
+          />
+
         </Route>
 
         <Route exact path="/login">
@@ -25,16 +29,23 @@ const App = (props) => {
         </Route>
 
         <Route exact path="/mylist">
-          <MyListScreen />
+          <MyListScreen
+            movies={movies}/>
         </Route>
 
-        <Route exact path="/films/:id">
-          <MovieScreen />
-        </Route>
+        <Route exact path="/films/:id/review"
+          render={({match}) => <AddReviewScreen
+            movie={movies.find((movie) => movie.id === +match.params.id)}
+            movies={movies}
+          />}
+        />
 
-        <Route exact path="/films/:id/review">
-          <AddReviewScreen />
-        </Route>
+        <Route exact path="/films/:id"
+          render={({match}) => <MovieScreen
+            movie={movies.find((movie) => movie.id === +match.params.id)}
+            movies={movies}
+          />}
+        />
 
         <Route exact path="/player/:id">
           <PlayerScreen />
@@ -45,9 +56,6 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  title: PropTypes.string.isRequired,
-  genre: PropTypes.string.isRequired,
-  year: PropTypes.number.isRequired
+  movies: moviesListPropTypes.isRequired
 };
 
-export default App;

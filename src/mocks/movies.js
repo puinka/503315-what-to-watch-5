@@ -1,4 +1,4 @@
-export default [
+export const movies = [
   {
     id: 262180403526,
     title: `The Grand Budapest Hotel`,

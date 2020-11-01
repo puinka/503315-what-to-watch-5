@@ -7,12 +7,13 @@ import {MoviesList} from "../movies-list/movies-list";
 export const Main = (props) => {
 
   const {movies} = props;
+  const featuredMovie = movies[0];
 
   return (
     <React.Fragment>
       <section className="movie-card">
         <div className="movie-card__bg">
-          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={movies[0].title} />
+          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={featuredMovie.title} />
         </div>
         <h1 className="visually-hidden">WTW</h1>
         <header className="page-header movie-card__head">
@@ -36,10 +37,10 @@ export const Main = (props) => {
               <img src="img/the-grand-budapest-hotel-poster.jpg" alt="The Grand Budapest Hotel poster" width="218" height="327" />
             </div>
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{movies[0].title}</h2>
+              <h2 className="movie-card__title">{featuredMovie.title}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{movies[0].genre}</span>
-                <span className="movie-card__year">{movies[0].year}</span>
+                <span className="movie-card__genre">{featuredMovie.genre}</span>
+                <span className="movie-card__year">{featuredMovie.year}</span>
               </p>
               <div className="movie-card__buttons">
                 <button className="btn btn--play movie-card__button" type="button">

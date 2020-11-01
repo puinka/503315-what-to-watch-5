@@ -11,7 +11,8 @@ export const MovieCard = (props) => {
     <article
       className="small-movie-card catalog__movies-card"
       onMouseOver={handleCardMouseOver}
-      onMouseOut={handleCardMouseOut}>
+      onMouseOut={handleCardMouseOut}
+    >
       <div className="small-movie-card__image">
         <img src={movie.preview} alt={movie.title} width="280" height="175" />
       </div>

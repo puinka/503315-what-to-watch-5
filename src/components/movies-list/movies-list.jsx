@@ -18,6 +18,8 @@ export class MoviesList extends React.PureComponent {
     this.setState({
       activeCard: id
     });
+    //console.log(this.state.activeCard)
+    //console.log(id)
   }
 
   handleCardMouseOut() {
@@ -35,7 +37,8 @@ export class MoviesList extends React.PureComponent {
           <MovieCard key={movie.id}
             movie={movie}
             handleCardMouseOver={this.handleCardMouseOver}
-            handleCardMouseOut={this.handleCardMouseOut}/>
+            handleCardMouseOut={this.handleCardMouseOut}
+            isActiveCard={this.state.activeCard === movie.id}/>
         ))}
       </div>
     );

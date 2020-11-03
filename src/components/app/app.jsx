@@ -1,5 +1,4 @@
 import React from "react";
-import {moviesListPropTypes} from "../../types/movie-prop-types";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import {Main} from "../main/main";
 import {SignInScreen} from "../sign-in-screen/sign-in-screen";
@@ -7,14 +6,13 @@ import {MyListScreen} from "../my-list-screen/my-list-screen";
 import {MovieScreen} from "../movie-screen/movie-screen";
 import {AddReviewScreen} from "../add-review-screen/add-review-screen";
 import {PlayerScreen} from "../player-screen/player-screen";
-
+import {moviesListPropTypes} from "../../types/movie-prop-types";
 
 export const App = (props) => {
 
   const {movies} = props;
 
   return (
-
     <BrowserRouter>
       <Switch>
         <Route exact path="/" >

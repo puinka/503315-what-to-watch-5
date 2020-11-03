@@ -1,7 +1,7 @@
 import React from "react";
-import {moviesListPropTypes} from "../../types/movie-prop-types";
 import {Link} from "react-router-dom";
 import {MoviesList} from "../movies-list/movies-list";
+import {moviesListPropTypes} from "../../types/movie-prop-types";
 
 export const MyListScreen = (props) => {
   const {movies} = props;

@@ -15,9 +15,7 @@ export class MoviesList extends React.PureComponent {
   }
 
   handleCardMouseOver(id) {
-    this.setState({
-      activeCard: id
-    });
+    setTimeout(this.setState({activeCard: id}), 1000);
     //console.log(this.state.activeCard)
     //console.log(id)
   }
